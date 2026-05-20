@@ -97,6 +97,13 @@ function ui_load_sample() {
     ui_select_card_by_index(firstAddedCardIndex);
 }
 
+function ui_load_jean_roger() {
+    console.log("on load jean-roger");
+    const firstAddedCardIndex = card_data.length;
+    ui_add_cards(card_data_jean_roger);
+    ui_select_card_by_index(firstAddedCardIndex);
+}
+
 function ui_clear_all(enableAsking) {
     if (!card_data.length) {
         return true;
@@ -1122,6 +1129,7 @@ $(document).ready(function () {
     $("#file-load").change(ui_load_files);
     $("#button-clear").click(function () { ui_clear_all(true); });
     $("#button-load-sample").click(ui_load_sample);
+    $("#button-load-jean-roger").click(ui_load_jean_roger);
     $("#button-save").click(ui_save_file);
     $("#button-sort").click(ui_sort);
     $("#button-filter").click(ui_filter);
